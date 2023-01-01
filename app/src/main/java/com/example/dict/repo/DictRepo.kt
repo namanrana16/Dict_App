@@ -6,5 +6,6 @@ import javax.inject.Inject
 class DictRepo @Inject constructor(
     private val dictApi: DictApi
 ) {
-    suspend fun getDict(word: String) = dictApi.getDict(word)
+    suspend fun getDict() = dictApi.getDict()
+    suspend fun login(username:String,password:String) = dictApi.login(username,password)
 }
